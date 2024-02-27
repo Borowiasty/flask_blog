@@ -9,7 +9,7 @@ def save_picture(form_picture):
     random_hex = secrets.token_hex(8)
     _, f_ext = os.path.splitext(form_picture.filename)
     pictur_fn = random_hex + f_ext
-    pictur_path = os.path.join(app.root_path, 'static/profile_pics', pictur_fn)
+    pictur_path = os.path.join(current_app.root_path, 'static/profile_pics', pictur_fn)
     
     output_size = (125, 125)
     resize_image = Image.open(form_picture)
